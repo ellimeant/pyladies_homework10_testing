@@ -1,10 +1,24 @@
+from homework10_testing import move, evaluate
+
+
+
+
 def test_evaluate_1():
-    boardstring = "---------------x--"
-    assert "xxx" in boardstring
-    raise AssertionError("The string doesn't contain 'xxx'!")
+    boardstring = "-------------xxx--"
+    result = evaluate(boardstring)
+    assert result == "X won"
     #assert len(20) == True
 
 def test_evaluate_2():
+    board = "HelloWord HelloWorld"
+    res = evaluate(board)
+    assert res == "game not over yet"
+
+
+
+#this test does not test the function but just if the variable boardstring is contains "xxx".
+def test_evaluate_variablecontent():
     boardstring = "-------------xxx--"
-    assert "xxx" in boardstring == True
+    result = evaluate(boardstring)
+    assert "xxx" in boardstring
     # assert len(20) == True

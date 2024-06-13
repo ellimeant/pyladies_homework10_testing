@@ -1,5 +1,5 @@
 def evaluate(boardstring):
-    boardstring = "--------------------"
+    boardstring = "------xxx-----------"
     xxx = "xxx"
     ooo = "ooo"
     empty_space = " "

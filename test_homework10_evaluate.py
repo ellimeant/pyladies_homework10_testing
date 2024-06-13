@@ -1,6 +1,7 @@
 def test_evaluate_1():
     boardstring = "---------------x--"
-    assert "xxx" == True
+    assert "xxx" in boardstring
+    raise AssertionError("The string doesn't contain 'xxx'!")
     #assert len(20) == True
 
 def test_evaluate_2():

@@ -16,3 +16,7 @@ def evaluate(boardstring):
 
 def move(board, mark, position):
      return board[:position] + mark + board[position+1:] 
+
+teststring = "------xxo-----------"
+
+print(move(teststring, "x", 1))

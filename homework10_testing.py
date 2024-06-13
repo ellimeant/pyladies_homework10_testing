@@ -19,8 +19,11 @@ def evaluate(boardstring):
         return("draw")
 
 def move(board, mark, position):
-     return board[:position] + mark + board[position+1:] 
+    if position not in range(0,21):
+        raise ValueError("Only numbers from 0 to 20!")
+    else:
+        return board[:position] + mark + board[position+1:] 
 
 teststring = "------xxo-----------"
 
-print(move(teststring, "x", 1))
+#print(move(teststring, "x", 24))

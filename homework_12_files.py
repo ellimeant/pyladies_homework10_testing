@@ -1,3 +1,37 @@
+#Task 1: The following Python program contains four common programming errors. For each error that you find, write its line number and a brief description of the problem.
+#I have not copied the incorrect code because it would throw the error messages. Here are the things that I identified:
+# line 2: you need to add int() around the input so that num is recognised as a number in line 5 and 7. Otherwise, it cannot return e.g. "***" or "==="
+# line 6: else if should be elif
+# line 8: else needs to be followed by a :
+
+#Task 2: correct the code:
+def find_max(numbers):
+  if not numbers:
+    return None
+  max_value = numbers[0]
+  for num in numbers:
+    if num > max_value:
+      max_value = num
+  return max_value
+
+
+numbers = [3, 5, 7, 2, 8]
+print(find_max(numbers))  # Expected output: 8
+
+
+numbers = []
+print(find_max(numbers))  # Expected output: Error message or appropriate handling
+
+#What are the issues in the given script?
+#The code needs to be aware that there is no limit to indices (no matter how high or if there are none).
+#How did you identify and fix them?
+#It would not read in the indices in the list "numbers". fix by adding if not numbers: return None; to give the program a way out.
+#How would you handle an empty list in this function?
+# the return None also handles empty lists because it will then return "None".
+
+
+#Task 3:
+
 #read in the file
 poem_file = open('input.txt', encoding="utf-8")
 content = poem_file.read()
@@ -45,3 +79,11 @@ output_is_successful = poem_file.read()
 print(output_is_successful)
 
 #poem_file.close()          can't count lines in poem_file if this is in the code.
+
+
+# Task 4: What is a breakpoint, and how is it used in debugging?
+# The b(reak) function is used to invoke a breakpoint in the Python De-Bugger and indicates a specific line or function where we want to stop the code to run to investigate it.
+
+
+# Task 5: How can you handle exceptions in Python as a debugging step?
+# You can debug code by writing tests that raise exceptions. There you can already find the bugs and remove them because you know which error is caused.

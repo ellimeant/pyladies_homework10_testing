@@ -6,8 +6,13 @@ print(content)
 characters = str(len(content)) # characters in the poem string
 print("This poem contains", characters, "characters.")
 
-word_list = str(content.split())
+word_list = (content.split())
 print("This poem has", len(word_list), "words.")
+
+delete_char = " "
+while delete_char in word_list:
+    word_list.remove(delete_char)
+print(word_list)
 
 many_words = str(len(word_list))
 
